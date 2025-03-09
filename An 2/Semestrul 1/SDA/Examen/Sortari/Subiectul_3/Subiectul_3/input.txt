@@ -1,0 +1,5 @@
+Ana 1200 0
+Mihai 3000 0
+Ionut 2500 0
+Bianca 5000 1
+Claudia 3500 1
