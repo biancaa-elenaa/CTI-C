@@ -1,0 +1,43 @@
+class Main{
+    public static void main(String[] args){
+
+	
+    }
+}
+
+class Desen{
+    private String titlu;
+    private Figura[] figuri=new Figura[1024];
+    private int nrFiguri=0;
+
+    public Desen(String titlu)
+    {
+	this.titlu=titlu;
+    }
+
+    public boolean adaugaFigura(Figura fig)
+    {
+	
+    }
+    
+}
+
+class Figura{
+    private float arie;
+
+    public Figura(float arie){
+	this.arie=arie;
+    }
+
+    private boolean equals(Object o)
+    {
+	if(o instaceof Figura){
+	    return ((Figura).o).getArie() == this.arie;
+	}
+	return false;
+    }
+
+    public float getArie(){
+	return this.arie;
+    }
+}

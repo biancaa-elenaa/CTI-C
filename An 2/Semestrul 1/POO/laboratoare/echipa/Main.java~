@@ -1,0 +1,57 @@
+class Main{
+    public static void main(String[] args){
+	Jucator j1 = new Jucator("Hagi",15);
+	Jucator j2 = new Jucator("Messi",10);
+	Jucator j3 = new Jucator("Ronaldo",24);
+
+	System.out.println(j1.equals(j2));
+	System.out.println(j1.equals(j1));
+    }
+}
+
+class Jucator{
+    private String nume;
+    private int numar;
+
+    public Jucator(String nume,int numar){
+	this.nume=nume;
+	this.numar=numar;
+    }
+
+    public boolean equals(Object o)
+    {
+	if(o instanceof Jucator)
+	    return ((Jucator)o).nume.equals(this.nume) && ((Jucator)o).getNumar == this.numar;
+	return false;
+    }
+
+    public String getNume()
+    {
+	return this.nume;
+    }
+
+    public int getNumar(){
+	return this.numar;
+    }
+
+		
+}
+
+class Echipa{
+    private Jucator titulari=new Jucator[10];
+    private Jucator rezerve = new Jucator[10];
+    private int nrJucatori = 0;
+
+    public Echipa(Jucator j1,Jucator j2)
+    {
+	this.titulari[nrJucatori]=j1;
+	this.rezerve[nrJucatori] = j2;
+	this.nrJucatori ++;
+    }
+
+    public boolean efectueazaSchimbarea(Jucator titular,Jucator rezerva)
+    {
+	
+	
+    }
+}

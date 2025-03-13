@@ -1,0 +1,56 @@
+class Main{
+    public static void main(String[] args)
+    {
+	
+    }
+}
+
+class Card{
+    private String numar;
+    private double  sold;
+
+    public Card(String numar,double sold);
+    {
+	this.numar = numar;
+	this.sold = sold;
+	
+    }
+
+    private String toString(){
+	return numar + " - " + sold + "\n";
+    }
+
+    
+}
+
+class Portofel{
+    private String numeProprietar;
+    private Card[] carduri = new Card[6];
+    private int nrCarduri = 0;
+
+    public Portofel(String numeProprietar){
+	this.numeProprietar = numeProprietar;
+    }
+
+    public boolean adaugaCard(String numar, double sold){
+	if(nrCarduri < 6)
+	    {
+		for(int i=0;i<nrCarduri;i++)
+		    {
+			if(carduri[i].numar.equals(numar))
+			    return false;
+		    }
+		carduri[nrCarduri++] = new Card(numar,sold);
+	    }
+	return false;
+    }
+
+    public String toString(){
+	String rez = "Portofel " + this.nume + "\n";
+	for(int i=0;i<nrCarduri;i++)
+	    {
+		rez += carduri[i].toString();
+	    }
+	return rez;
+    }
+}

@@ -1,0 +1,65 @@
+class Main{
+    public static void main(String[] args){
+
+    }
+}
+
+class Angajat{
+    private String nume;
+    private int salariu;
+
+    public Angajat(String nume,int salariu)
+    {
+	this.nume= nume;
+	this.salariu = salariu;
+    }
+
+    public boolean equals(Object o)
+    {
+	if(o instanceof Angajat)
+	    {
+		Angajat a = (Angajat)o;
+		return this.salariu == a.salariu && this.nume.equals(nume);
+	    }
+	return false;
+    }
+
+    public String toString(){
+	return "Angajat: <" + this.nume + "> - <" + this.salariu + ">\n";
+    }
+    
+}
+
+class Firma{
+    private String nume;
+    private int buget;
+    private Angajat[] angajati = new Angajat[30];
+    private int nrAngajati=0;
+
+    public Firma(String nume,int buget){
+	this.nume=nume;
+	this.buget=buget;
+    }
+
+    public boolean adaugaAngajat(Angajat a){
+	if(nrAngajati < 30)
+	    {
+		for(int i=0;i<nrAngajati;i++)
+		    if(angajati[i].equals(a))
+			return false;
+		angajati[nrAngajati++]=a;
+		return true
+		
+	    }
+	return false;
+    }
+
+    public String toString(){
+	String res = "Nume firma: " + this.nume + " ";
+	for(int i=0;i<nrAngajati;i++)
+	    res += angajati[i].toString;
+	return res;
+    }
+    
+
+}

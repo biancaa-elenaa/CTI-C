@@ -1,0 +1,78 @@
+class Main{
+}
+
+
+class Tir{
+    private Remorca[] remorci = new Remorca[5];
+    private static nrRemorci = 0;
+    public boolean adaugaRemorca(int nrCutii,String nrInmatriculare)
+    {
+	if(nrRemorci < 5)
+	    {
+		remorci[nrRemorci] = new Remorca(nrCutii,nrInmatriculare);
+		nrRemorci++;
+		return true;
+	    }
+	return false;
+    }
+
+    public boolean adaugaRemorca(Remorca remorca)
+    {
+	if(nrRemorci < 5)
+	    {
+		remorci[nrRemorci] = remorca;
+		nrRemorci++;
+		return true;
+	    }
+	return false;
+    }
+
+    public Remorca stergeRemorca(String nrInmatriculare)
+    {
+	for(int i=0;i<nrRemorci;i++)
+	    {
+		if (remorci[i].getNrInmatriculare.equals(nrInmatriculare))
+		    {
+			for(int j=i;j<nrRemorci-1;j++)
+			    remorci[j]=remorci[j+1];
+			return this.remorci[i];
+		    }
+	    }
+	return null;
+    }
+}
+
+class Remorca{
+    private int nrCutii;
+    private String nrInmatriculare;
+
+    private static int nrCutiiAnt = 9;
+
+    public Remorca (int nrCuti,String nrInmatriculare)
+    {
+	this.nrCutii=nrCutii;
+	this.nrInmatriculare = nrInmatriculare;
+	nrCutiiAnt = this.nrCutii;
+    }
+
+    public Remorca( String nrInmatriculare)
+    {
+	this.nrCutii = 1 + nrCutiiAnt;
+	this.nrInmatriculare = nrInmatriculare;
+	nrCutiiAnt = this.nrCutii;
+	
+    }
+
+    public boolean equals(Object o) 
+    {
+	if(o instanceof Remorca)
+	    return (((Remorca)o).nrInmatriculare == this.nrInmatriculare);
+	return false;
+    }
+
+
+    public String getNrInmatriculare()
+    {
+	return this.nrInmatriculare;
+    }
+}

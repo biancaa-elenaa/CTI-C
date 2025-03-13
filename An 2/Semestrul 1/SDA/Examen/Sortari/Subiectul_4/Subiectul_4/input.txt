@@ -1,0 +1,7 @@
+Maria 15 1
+Ana 20 0
+Marian 10 0
+Claudia 18 1
+Bianca 20 1
+Ionela 11 1
+Mara 1 1
