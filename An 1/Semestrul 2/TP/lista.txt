@@ -1,0 +1,156 @@
+`#include <stdio.h>
+#include <stdlib.h>
+
+//definim unsigned ca Element_lista (elementele din lista vor fi unsigned)
+
+typedef unsigned Element_lista_t;
+
+
+
+//DEFINIREA LISTEI
+//facem un struct ca sa definim lista (valoarea si pointerul catre urmatorul nod)
+
+typedef struct Nod_lista
+{
+    Element_lista_t info;
+    struct Nod_lista *urmatorul;
+}Nod_lista_t;  //(ca sa nu mai scriem struct)   (nodul in sine)
+
+
+//facem o alta definire a lui Lista_t = pointer la capul listei deci il declaram Nod_lista_t* (neaparat cu pointer!!!) (contine toata lista daca vrei sa o iei asa)
+
+typedef Nod_lista_t* Lista_t;
+
+
+
+//// CREEAREA LISTEI
+// creeaza o lista goala de tip Lista_t
+
+Lista_t makelist()
+{
+    return NULL;
+}
+
+
+
+///AFISAREA LISTEI
+void afisare(Lista_t L)   //primeste pointer la capul listei
+{
+    for(Lista_t c = L; c!=NULL; c = c->urmatorul)     //initializam o variabila de tip Lista_t cu capul listei, iteram pana ajungem la NULL, deci lista e goala, si dupa fiecare iteratie, c primeste pointer la urmatorul nod
+    {
+        printf("%d", c->info); //printam informatia din nodul respectiv
+    }
+    printf("\n");
+}
+
+
+//CREEAREA UNUI NOD NOU
+
+Nod_lista_t* creeare_nod(Element_lista_t el) //(el este elementul pe care il adaugam in lista)
+{
+    Nod_lista_t* nod= malloc(sizeof(Nod_lista_t));
+
+    //verificare daca alocarea memorie a avut succes (daca e suficienta memorie)
+
+    if(!nod)
+    {
+        return NULL;
+    }
+
+    //actualizam datele nodului
+    nod->urmatorul = NULL;
+    nod->info = el;
+    return nod;    
+}
+
+// INSERAREA UNUI NOD NOU IN CAPUL LISTEI
+
+Lista_t insertNOD(Lista_t L, Element_lista_t el)
+{
+    Nod_lista_t* nou=creeare_nod(el);
+    if(!nou)            //aceeasi verificare de memorie ca la functia de creeare nod
+     {
+        return NULL;
+    }
+
+    //nodul nou trebuiesa fie legat de lista deci pointerul lui va fi actualizat cu pointerul listei initiale
+    nou->urmatorul = L;
+    L = nou;
+    return L;
+}
+
+
+// INSEREAREA UNUI NOD IN POZITIA K
+
+Lista_t insertPOZ( Lista_t L, Element_lista_t el, unsigned poz)
+{
+    //creeam un nod
+    Nod_lista_t* nou = creeare_nod(el);
+
+    //verificam daca a functional malloc
+    if(!nou)
+        return NULL;
+
+    if(poz == 0)
+        return insertNOD(L,el);
+
+
+    //initializa c = lista
+    Nod_lista_t* c =L;
+
+
+    //iteram pana la pozitia poz - 1 ssu pana cand lista e goala
+    for(int i = 0; i < (poz-1)  && (c->urmatorul !=NULL ); i++)
+    {
+        c = c->urmatorul;   // am ajuns la nodul de care vrem sa legam noul nod
+    }
+    printf("am ajuns la elementul %d ", c->info);
+    
+    //actualizam datele ca sa legam noul nod de lista
+    nou->urmatorul = c->urmatorul;   //pointerului din nodul nou ii dam adresa pointereului din nodul c
+    c->urmatorul = nou; // nodului c ii dam adresa noului nod
+    return L;
+}
+
+
+//STERGEREA UNUI NOD DIN POZITIA K
+
+Lista_t deleteNOD(Lista_t L, Element_lista_t el, unsigned poz)
+{
+    //verificam daca lista e goala
+    if(L==NULL)
+        return L;
+    
+    //cazul in care pozitia = 0
+    if(poz == 0)
+    {
+        Nod_lista_t* aux = L;
+        L = L->urmatorul;
+        free(aux);
+        return L;
+    }
+
+    Nod_lista_t* c = L;
+
+    //cazul in care pozitia e diferita de 0
+    for(int i =0; i<(poz-1) && c->urmatorul !=NULL ; i++)
+    {
+        c = c->urmatorul;
+    }
+
+    //verificam daca pozitia poz esxista
+    if(c->urmatorul ==NULL)
+        return L;
+    
+    
+    Nod_lista_t* aux = c->urmatorul;  // il salvam in aux ca sa ii putem da free
+    c->urmatorul = c->urmatorul->urmatorul;  // ii dam adresa nodului dupa cel pe care il stergem
+    free(aux);
+    return L;
+}
+
+
+int main()
+{
+    return 0;
+}`

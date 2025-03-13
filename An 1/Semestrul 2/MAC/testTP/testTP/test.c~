@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "biblioteca.h"
+
+int main(void)
+{
+  KVS_t *data = initializare();
+
+  EL_t elem;
+  elem.cheie = 10;
+  elem.valoare = 5;
+
+  data = adauga(data, elem);
+
+  elem.cheie = 7;
+  elem.valoare = 12;
+
+  
+
+  printKVS(data);
+  printf("%d %d\n", cauta(data, 5), cauta(data, 7));
+  eliberare(data);
+  return 0;
+}
+

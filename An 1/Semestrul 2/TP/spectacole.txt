@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+  int ora_int,ora_out;
+  char nume;
+}Spec;
+
+
+
+Speccitire_Spectacole(FILE f,intsize)
+{
+  Spec spectacole=malloc(10sizeof(Spec));
+  while(fscanf(f,"%d",&spectacole[size].ora_int)==1)
+    {
+      fscanf(f,"%d",&spectacole[size].ora_out);
+      spectacole[size].nume=malloc(40sizeof(char));
+      fgets(spectacole[size].nume,40,f);
+      spectacole[size].nume[strlen(spectacole[size].nume)-1]='\0';
+      (size)++;
+    }
+  return spectacole;
+}
+
+void afisare_spectacole(Spec spectacole, int size)
+{
+   for(int i=0;i<size;i++)
+    {
+      printf("%d -> %d --- %s\n",spectacole[i].ora_int,spectacole[i].ora_out,spectacole[i].nume);
+    }
+   printf("\n");
+}
+
+
+int sortare_spectacole(const voidelem1, const void elem2)
+{
+  Speca=(Spec )elem1;
+  Specb=(Spec )elem2;
+  return a->ora_out-b->ora_out;
+}
+
+int max_spectacole(Spec spectacole, int size)
+{
+  int setate=1;
+  Spec lineup=malloc(10sizeof(Spec));
+  lineup[0]=spectacole[0];
+  int i=1;
+  while(i<=size)
+    {
+      if(lineup[setate-1].ora_out<=spectacole[i].ora_int)
+    {
+      lineup[setate]=spectacole[i];
+      setate++;
+    }
+      i++;
+    }
+  afisare_spectacole(lineup,setate);
+  return setate;
+}
+
+
+void eliberare(Spec spectacole,int size)
+{
+  for(int i=0;i<size;i++)
+    {
+      free(spectacole[i].nume);
+    }
+  free(spectacole);
+}
+
+
+
+int main(void)
+{
+  FILE *f;
+  f=fopen("spectacole.in","r");
+  int size=0;
+  Spec *spectacole=citire_Spectacole(f,&size);
+  //afisare_spectacole(spectacole,size);
+  //sortare_spectacole(spectacole,size);
+  qsort(spectacole,size,sizeof(Spec),sortare_spectacole);
+  afisare_spectacole(spectacole,size);
+  printf("Am putut adauga %d spectacole\n",max_spectacole(spectacole,size));
+  eliberare(spectacole,size);
+  fclose(f);
+  return 0;
+}

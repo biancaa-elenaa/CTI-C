@@ -1,0 +1,18 @@
+CC = gcc
+
+CFLAGS = -g -Wall -O3
+
+TARGET = client
+
+RM = rm -f
+
+all: $(TARGET)
+
+$(TARGET):
+	$(CC) $(CFLAGS) -c stiva.c
+	$(CC) $(CFLAGS) -c client1.c
+	$(CC) $(CFLAGS) -o $(TARGET).x stiva.o client1.o
+	./$(TARGET).x
+clean:
+	$(RM) $(TARGET).x
+
