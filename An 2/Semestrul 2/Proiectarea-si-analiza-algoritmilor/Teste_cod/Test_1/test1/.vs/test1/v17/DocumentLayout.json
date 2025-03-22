@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E69AAE46-A7B8-43EB-BD75-C404BAF68833}|test1\\test1.vcxproj|D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E69AAE46-A7B8-43EB-BD75-C404BAF68833}|test1\\test1.vcxproj|solutionrelative:test1\\Main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69AAE46-A7B8-43EB-BD75-C404BAF68833}|test1\\test1.vcxproj|D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Bib.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E69AAE46-A7B8-43EB-BD75-C404BAF68833}|test1\\test1.vcxproj|solutionrelative:test1\\Bib.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69AAE46-A7B8-43EB-BD75-C404BAF68833}|test1\\test1.vcxproj|D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Bib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E69AAE46-A7B8-43EB-BD75-C404BAF68833}|test1\\test1.vcxproj|solutionrelative:test1\\Bib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.c",
+              "DocumentMoniker": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Main.c",
+              "RelativeDocumentMoniker": "test1\\Main.c",
+              "ToolTip": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Main.c",
+              "RelativeToolTip": "test1\\Main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-19T19:41:36.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bib.c",
+              "DocumentMoniker": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Bib.c",
+              "RelativeDocumentMoniker": "test1\\Bib.c",
+              "ToolTip": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Bib.c",
+              "RelativeToolTip": "test1\\Bib.c",
+              "ViewState": "AgIAAEcBAAAAAAAAAAAowGMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-19T19:41:25.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bib.h",
+              "DocumentMoniker": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Bib.h",
+              "RelativeDocumentMoniker": "test1\\Bib.h",
+              "ToolTip": "D:\\CTI-C\\An 2\\Semestrul 2\\Proiectarea-si-analiza-algoritmilor\\Teste_cod\\Test_1\\test1\\test1\\Bib.h",
+              "RelativeToolTip": "test1\\Bib.h",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-19T19:41:14.616Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
